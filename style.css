@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+main {
+  width: 100%;
+}
+
+html {
+  background-color: black;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+header {
+  height: 10vh;
+  padding: 3vh 2vw 3vh 2vw;
+  font-size: 2vh;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: 'Sora', sans-serif;
+}
+
+main {
+  padding: 2vh 2vw;
+  background-color: rgb(94, 143, 105);
+  height: 85vh;
+  min-height: 600px;
+}
+
+footer {
+  height: 90vh;
+  padding: 1.5vh 1vw;
+  font-size: 1.5vh;
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-family: 'Sora', sans-serif;
+}
+
+body.loaded footer {
+  height: 5vh;
+  transition-duration: 1.5s;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+h1 span,
+.result span {
+  color: rgb(240, 36, 36);
+  text-transform: lowercase;
+}
+
+.grid {
+  height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+  grid-gap: 10px 15px;
+  align-items: center;
+  justify-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 132px;
+}
+
+.deck {
+  grid-area: 1 / 2 / span 1 / span 1;
+  justify-self: end;
+}
+
+.anticlockwise {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+
+.clockwise {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+img {
+  align-self: center;
+  justify-self: center;
+  max-height: 15vh;
+  margin: 5px;
+  min-height: 115px;
+}
+
+.house.hand {
+  grid-area: 1 / 3 / span 1 / span 1;
+  max-height: 20vh;
+  width: 120px;
+}
+
+.house.deal {
+  grid-area: 2 / 1 / span 1 / span 5;
+  max-height: 20vh;
+}
+
+.player.deal {
+  grid-area: 3 / 1 / span 1 / span 5;
+  max-height: 20vh;
+}
+
+.result {
+  grid-area: 2 / 1 / span 2 / span 5;
+  background-color: black;
+  width: 100%;
+  padding: 40px;
+  height: 180px;
+  visibility: hidden;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Sora', sans-serif;
+  font-size: 80px;
+  text-align: center;
+}
+
+.player.hand {
+  grid-area: 4 / 3 / span 1 / span 1;
+  max-height: 20vh;
+  width: 200px;
+}
+
+.play.buttons {
+  grid-area: 4 / 3 / span 1 / span 1;
+  max-height: 20vh;
+  width: 200px;
+  text-align: center;
+}
+
+#play-button {
+  visibility: visible;
+}
+
+.player.buttons {
+  grid-area: 4 / 4 / span 1 / span 1;
+  min-width: 80px;
+  justify-self: start;
+  visibility: hidden;
+  flex-direction: column;
+}
+
+.hand {
+  border-radius: 10px;
+  border: 3px white solid;
+  width: 20vw;
+}
+
+.deal {
+  border-radius: 10px;
+  border: 3px white solid;
+  margin: 0 auto;
+  width: 460px;
+}
+
+button {
+  background-color: rgb(48, 47, 47);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  margin: 1vh 1vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 80px;
+  font-family: 'Sora', sans-serif;
+  text-transform: uppercase;
+  outline: none;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(48, 47, 47);
+  transition-duration: 0.5s;
+  transition-timing-funtion: ease-out;
+}

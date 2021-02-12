@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BLACKjack</title>
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body onload="document.body.className += ' loaded';">
+
+        <header>
+            <h1>BLACK<span>jack</span></h1>
+        </header>
+
+        <main>
+
+            <div class="grid">
+
+                <div class="deck draw">
+                </div>
+                <div class="deck bottom clockwise">
+                    <img src="./images/Red_back.png" alt="Card back" />
+                </div>
+                <div class="deck top anticlockwise">
+                    <img src="./images/Red_back.png" alt="Card back" />
+                </div>
+
+
+                    <div class="flex house hand">
+                    </div>
+
+                    <div class="flex house deal">
+                    </div>
+
+                    <div class="flex player deal">
+                    </div>
+
+                    <div class="result">
+                    </div>
+
+                    <div class="flex player hand">
+                    </div>
+
+                    <div class="flex player buttons">
+                        <button class="hit-button" type="button">Hit</button>
+                        <button class="stand-button" type="button">Stand</button>
+                    </div>
+
+                    <div class="play buttons">
+                        <button id="play-button" type="button">Play</button>
+                    </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>CHAMBER-MADE</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="blackjackScript.js"></script>
+    </body>
+
+</html>
